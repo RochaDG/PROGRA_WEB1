@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Formulario</title>
+</head>
+<body>
+	<center>
+<h1 >Venta en linea</h1>
+</center>
+<form>
+	<fieldset>
+
+	<legend>Datos del usuario</legend>
+    <table align="center">
+    <tr>	
+    	<td>
+			<label for="apo">Nombre</label><br/>
+			<input type="Text" name="apo" id="apo" requiered>
+	    </td>
+	    <td>
+			<label for="pate">Apellido Paterno</label><br/>
+			<input type="Text" name="pate" id="pate" required>
+		</td>
+		<td>
+			<label for="usuario">Apellido Materno</label><br/>
+			<input type="Text" name="usuario" id="usuario" requiered>
+		</td>
+	<br/>
+    </tr>
+    <tr>
+    	<td>
+			<label for="mater">Nombre del usuario</label><br/>
+			<input type="Text" name="mater" id="mater" requiered>
+		</td>
+		<td>
+			<label>Contraseña</label><br/>
+			<input type="pasword" name="Pass" id="pass" size="20" required>
+		</td>
+		<td><
+			<label>Fecha de nacimiento</label><br/>
+			<input type="date" name="fecha" id="fecha">
+		</td>
+	</tr>
+</table>
+	</fieldset>
+</form>
+<form>
+	<fieldset>
+		<legend>Datos de facturacion</legend>
+<table align="center">
+	<tr>
+		<td>
+		<select size="5" multiple name="País">
+			<optgroup label="País">
+
+			<option value="1" selected>Mexico</option>
+			<option value="2">Canada</option>
+			<option value="4">USA</option>
+			<option value="5">Brasil</option>
+			<option value="6">UK</option>
+			</optgroup>
+		</select>
+		</td>
+		<td>
+        <select size="5" multiple name="Ciudad">
+			<optgroup label="Ciudad">
+			<option value="1" selected>San Luis Potosí</option>
+			<option value="2">Guadalajara</option>
+			<option value="4">Monterrey</option>
+			<option value="5">Juarez</option>
+			<option value="6">Zacatecas</option>
+			</optgroup>
+		</select>
+		</td>
+		<td>
+			<label for="calle">Calle</label><br/>
+			<input type="Text" name="calle" id="calle">
+	    </td>
+	    </tr>
+	    <tr>
+	    <td>
+        	<label for="casa">Numero de casa</label><br/>
+	    	<input type="number" name="casa" id="casa">
+	    </td>
+	    <td>	
+	    	<label for="colo">Colonia</label><br/>
+	    	<input type="Text" name="colo" id="colo">
+	    </td>
+	    <td>	
+			<label>Correo</label><br/>
+			<input type="email" name="correo" id="correo" required>
+		</td>
+		</tr>
+		<tr>
+		<td>	
+			<label for="rfc">R.F.C</label><br/>
+	    	<input type="Text" name="rfc" id="rfc">
+	    </td>
+	    <td>	
+	    	<label for="cp">C.P</label><br/>
+	    	<input type="number" name="cp" id="cp" required>
+	    </td>
+	    	<td>
+	    	<input type="submit" name="enviar" id="enviar" value="Envio del formulario">
+	    	</td>
+	    	<td>
+	    	<input type="reset" name="borrar" id="borrar" value="Eliminar datos">
+	    	</td>
+    </tr>
+</table>
+	</fieldset>
+</form>
+</body>
+</html>
