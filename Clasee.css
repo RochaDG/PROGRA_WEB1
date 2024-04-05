@@ -1,0 +1,23 @@
+#contendor{
+	
+	width: 100%;
+	margin: 15px;
+}
+#cont{
+	padding: 20px;
+	background-color: #E8E9EA ;
+	width: 70%;
+	margin: 50px auto;
+}
+input{
+	height: 90%;
+	width: 90%;
+	-moz- border-radius: 10deg;
+	-webkit- border-radius: 10deg;
+}
+#guar{
+	background-color: #075EF7;
+	border-radius:20px ;
+	-moz- border-radius: 20px;
+	-webkit- border-radius: 20px;
+}
