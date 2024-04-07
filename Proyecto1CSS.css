@@ -1,0 +1,50 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    height: 2000px;
+}
+h3 {
+    font-family: Consolas;
+    text-align: center;
+    background: linear-gradient(90deg, #A5B615, gray);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font size: 40px;
+}
+p{
+    text-align: justify;
+    font-family: Arial, sans-serif;
+}
+.background-color-animation {
+    background-color: #00f; /* Color de fondo inicial */
+    animation: changeColor 10s infinite; /* Duración de la animación y repetición infinita */
+}
+
+@keyframes changeColor {
+    0% {
+        background-color: #A1CCEC; /* Color de fondo inicial */
+    }
+
+    25% {
+        background-color: #A2C578; /* Color de fondo intermedio */
+    }
+    50% {
+        background-color: #F5B575; /* Color de fondo intermedio */
+    }
+    75% {
+        background-color: #F0B1E7; /* Color de fondo intermedio */
+    }
+    100% {
+        background-color: #A1CCEC; /* Color de fondo final */
+    }
+}
+#te{
+    color: Red;
+}
+#Alumno1{
+    color: #99499B ;
+}
+#Alumno2{
+    color:#49729B ;
+}
