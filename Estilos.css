@@ -1,0 +1,23 @@
+		.marco{
+		width: 50%;
+		height: 250px;
+		background-color: lightgrey;
+		border: 1px solid black;
+		padding-left: 1.5%;
+	}
+		.texto{
+		margin-left: 1%;
+		width: 93%;
+		height: 40px;
+		border: none;
+		}
+
+		.boton{
+		border: none;
+		margin-left: 1%;
+		margin-top: 2%;
+		width: 94%;
+		height: 40px;
+		background-color: #F49B9B;
+		color: white;
+		}
