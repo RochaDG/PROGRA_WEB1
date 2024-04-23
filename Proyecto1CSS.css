@@ -23,20 +23,20 @@ p{
 
 @keyframes changeColor {
     0% {
-        background-color: #A1CCEC; /* Color de fondo inicial */
+        background-color: #A3D3E5; /* Color de fondo inicial */
     }
 
     25% {
-        background-color: #A2C578; /* Color de fondo intermedio */
+        background-color: #9AC976; /* Color de fondo intermedio */
     }
     50% {
-        background-color: #F5B575; /* Color de fondo intermedio */
+        background-color: #EEC18B; /* Color de fondo intermedio */
     }
     75% {
-        background-color: #F0B1E7; /* Color de fondo intermedio */
+        background-color: #CAB8DF; /* Color de fondo intermedio */
     }
     100% {
-        background-color: #A1CCEC; /* Color de fondo final */
+        background-color: #A3D3E5; /* Color de fondo final */
     }
 }
 #te{
@@ -47,4 +47,58 @@ p{
 }
 #Alumno2{
     color:#49729B ;
+}
+.menu {
+    display: inline-block;
+    background: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    color: white;
+    transition: .5s;
+}
+.menu:hover{
+    background: green;
+    padding: 15px 25px;
+    color: #E3EA50;
+}
+nav {
+    background: black;
+    justify-content: space-around;
+    display: flex;
+    padding:10px;
+}
+
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: justify;
+    padding: 5px 10px;
+}
+th, td{
+    align-content: center;
+    text-align: justify;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    border: 3px solid black;
+}
+thead{
+    align-content: center;
+    text-align: center;
+    font-family: cursive;
+    color:maroon;
+}
+.imacto{
+    display: flex;
+}
+.textoimpacto{
+    flex: auto;
+    text-align: left;
+}
+.img_impacto{
+    flex: 1;
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    padding: 5px 200px 5px 200px;/*arriba, derecha, abajo, izquierda*/
 }
