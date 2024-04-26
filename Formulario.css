@@ -1,0 +1,73 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif; /* Usar la fuente importada */
+    background-color: #f5f5f5; /* Fondo claro para un look limpio */
+    color: #333; /* Color de texto principal */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para el contenedor principal */
+#contiene {
+    max-width: 800px; /* Ancho máximo del contenido */
+    margin: 20px auto; /* Centrarse horizontalmente */
+    padding: 20px; /* Espaciado interior */
+    background: white; /* Fondo blanco para el contenedor */
+    border: 1px solid #ccc; /* Borde ligero para definir el área */
+    border-radius: 8px; /* Borde redondeado */
+}
+
+/* Estilo para encabezados */
+h1 {
+    font-family: 'Charmonman', serif; /* Usar otra fuente para variedad */
+    font-size: 2em; /* Tamaño grande para el h1 */
+    color: #333; /* Color de texto */
+    text-align: center; /* Centrar el texto */
+}
+
+h2 {
+    font-size: 1.5em; /* Tamaño para el h2 */
+    color: #666; /* Color de texto secundario */
+    text-align: center; /* Centrar el texto */
+}
+
+/* Estilo para listas y elementos de entrada */
+ul {
+    list-style-type: none; /* Quitar puntos de lista */
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px; /* Espaciado entre elementos de lista */
+}
+
+input[type="radio"] {
+    margin-right: 10px; /* Espaciado después de los botones de opción */
+}
+
+/* Estilo para botones */
+input[type="button"] {
+    background-color: #4CAF50; /* Color de fondo del botón */
+    color: white; /* Color de texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border-radius: 4px; /* Borde redondeado */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+input[type="button"]:hover {
+    background-color: #45a049; /* Cambiar el color al pasar sobre el botón */
+}
+
+/* Estilo para el iframe */
+iframe {
+    border: 1px solid #ccc; /* Borde alrededor del iframe */
+    border-radius: 8px; /* Borde redondeado */
+}
+
+/* Estilo para el texto dinámico */
+#total, #comentario {
+    font-size: 1em; /* Tamaño estándar del texto */
+    color: #333; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+}

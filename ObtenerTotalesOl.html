@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Obtener totales del formulario</title>
+    <link rel="stylesheet" href="Formulario.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>	
+</head>
+<script>
+var total;
+function califica()
+    {var total=0;
+    	//Evalua cada pregunta
+    	for (var x=1;x<=4;x++)
+    	{
+        var res=0;
+        var nom="r"+x;
+        var resul=document.getElementsByName(nom);
+        for(var i=0;i<resul.length;i++)
+        {
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+        total=total+res;
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+        }
+        if(total==20)
+        	document.getElementById("comentario").innerHTML="EXCELENTE!!!";
+        else
+        	if(total==15)
+        	document.getElementById("comentario").innerHTML="Regular!!";
+        else
+        	if(total<=15)
+        	document.getElementById("comentario").innerHTML="Estudia un poco más";
+    }
+
+ 
+function generar(){
+
+//Crear un objeto o instancia jsPDF
+var doc = new jsPDF();
+
+//Definir el tamaño de la letra
+doc.setFontSize(40);
+//Color del texto
+doc.setTextColor(9,7,121);
+doc.text(40, 20, "Conceptos basicos");
+doc.setTextColor(17, 122, 209); //Color en formato RGB
+doc.setFontSize(30);
+doc.text(50, 35, "Resultados del test"); //Ubicación, Texto
+doc.setTextColor(0,0,0);
+doc.setFontSize(10);
+doc.text(20, 50, "20 puntos. Muy bien. \r Todas tus respuestas son correctas");
+doc.text(20, 70, "15 puntos. Regular. \r Obtuviste 2 preguntas correctas");
+doc.text(20, 90, "0 puntos. \r Todas tus respuestas son incorrectas");
+
+//doc.addImage(imgData, 'JPEG', 10, 40, 180, 180);
+
+var string = doc.output('datauristring');
+
+$('iframe').attr('src', string);
+
+}
+</script>
+
+<body>
+    <div id="contiene">
+	<h1>Responde la encuesta</h1>
+	<h2>Tu opinión es importante</h2>
+<div>
+	<form>
+	<ul>
+
+		<li>¿Que son los corridos tumbados?</li>
+		<input type="radio" name="r1" id="r1" value="5"/>Un género de música norteña que incorpora elementos de rap y trap<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Un estilo de baile tradicional<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Un tipo de poesía mexicana<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Un género de cine mexicano<br/>
+		
+		<li>¿Quién es considerado el pionero de los corridos tumbados?</li>
+		<input type="radio" name="r2" id="r2" value="0"/>Alejandro Fernández<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Luis R.Conriquez<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Peso pluma<br/>
+		<input type="radio" name="r2" id="r2" value="5"/>Natanael Cano<br/>
+
+		<li>¿Qué caracteriza a los corridos tumbados?</li>
+		<input type="radio" name="r3" id="r3" value="0"/> Uso de guitarras eléctricas y letras relacionadas con el narcotráfico<br/>
+		<input type="radio" name="r3" id="r3" value="5"/>Combinación de música tradicional y moderna, con influencia de rap<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Sonidos electrónicos y voces sintetizadas<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Uso de instrumentos clásicos y letras poéticas<br/>
+
+        <li>¿En qué año comenzaron a ganar popularidad los corridos tumbados?</li>
+		<input type="radio" name="r4" id="r4" value="5"/>2018<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>2022<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>2019<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>2020<br/>
+		
+		<li>¿Qué instrumento es común en los corridos tumbados?</li>
+		<input type="radio" name="r5" id="r5" value="0"/>Trompeta<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>Violin<br/>
+		<input type="radio" name="r5" id="r5" value="5"/>Guitarra Acustica<br/>
+		<input type="radio" name="r5" id="r5" value="5"/>Tololoche<br/>
+
+		<li>¿Cuál de las siguientes canciones es un corrido tumbado?</li>
+		<input type="radio" name="r6" id="r6" value="0"/>"La Cumbia del Garrote" de Rigo Tovar<br/>
+		<input type="radio" name="r6" id="r6" value="5"/>"Soy El Diablo" de Natanael Cano<br/>
+		<input type="radio" name="r6" id="r6" value="0"/>"La pizza" de Jose Tores<br/>
+		<input type="radio" name="r6" id="r6" value="0"/>"Despacito" de Luis Fonsi<br/>
+
+		<li>¿Los corridos tumbados están asociados con la cultura popular mexicana?</li>
+		<input type="radio" name="r7" id="r7" value="0"/>No, son un fenómeno completamente extranjero<br/>
+		<input type="radio" name="r7" id="r7" value="0"/>Solo en las regiones norteñas<br/>
+		<input type="radio" name="r7" id="r7" value="0"/>Sí, pero solo en ciertos grupos sociales<br/>
+		<input type="radio" name="r7" id="r7" value="5"/> Sí, están influyendo en la música moderna y tienen raíces en la tradición<br/>
+
+		<li>¿Qué tipo de temas suelen abordar las letras de los corridos tumbados?</li>
+		<input type="radio" name="r8" id="r8" value="5"/>Vida en la calle, drogas, y experiencias personales<br/>
+		<input type="radio" name="r8" id="r8" value="0"/> Amor y romance<br/>
+		<input type="radio" name="r8" id="r8" value="0"/>Historia y mitología<br/>
+		<input type="radio" name="r8" id="r8" value="0"/>Crítica política<br/>
+
+		<li>¿Quiénes suelen ser los principales oyentes de los corridos tumbados?</li>
+		<input type="radio" name="r9" id="r9" value="5"/>Jóvenes y adultos jóvenes<br/>
+		<input type="radio" name="r9" id="r9" value="0"/> Personas mayores de 40 años<br/>
+		<input type="radio" name="r9" id="r9" value="0"/>Niños y adolescentes<br/>
+		<input type="radio" name="r9" id="r9" value="0"/>Personas de todas las edades<br/>
+		
+		<li>¿Cómo ha sido la recepción de los corridos tumbados por parte del público y la crítica?</li>
+		<input type="radio" name="r10" id="r10" value="0"/>Universalmente positiva<br/>
+		<input type="radio" name="r10" id="r10" value="0"/>En su mayoría negativa debido a las letras controvertidas<br/>
+		<input type="radio" name="r10" id="r10" value="5"/>Dividida: algunos lo consideran innovador y otros lo ven como polémico<br/>
+		<input type="radio" name="r10" id="r10" value="0"/>Mayormente indiferente<br/>
+
+	</ul>
+</form>
+</div>
+<input type="button" value="Calificar" onclick="califica()">
+<p></p>
+<p id="total">   </p>
+<p id="comentario">   </p>
+<input type="button" onclick="generar()" value="Ver resultados"/> <br/>
+<iframe frameborder="0" width="600" height="500"></iframe>
+</div>
+</body>
+</html>
