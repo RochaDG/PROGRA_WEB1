@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<h2>JavaScript Validation</h2>
+
+<p>Ingresa un numero</p>
+
+<input id="id1" type="number" min="100" max="300" required>
+<button onclick="Maxmin()">Ok</button>
+
+<p>Si el numero es mas chico de 100 o mas grande de 300, se mostrara un error</p>
+
+<p id="dem"></p>
+<br><br><br><br>
+
+<p>Ingresa un numero:</p>
+
+<input type="id2" type="number" max="100">
+<button onclick="Solomax()">Ok</button>
+<br><br><br>
+<p>Si el numero es mayor se lanzara un error</p>
+
+<p id="demo"></p>
+<p>Ingresa nu numero:</p>
+<input type="id3" type="number" min="100" >
+<button onclick="myFuction()">Ok</button>
+
+<p id="dem1"></p>
+<p>Si el numero es mayor a 100 lanzara un error</p>
+<script >
+	function Maxmin(){
+
+		const inpObj=document.getElementById("id1");
+		if(!inpObj.checkValidity()){
+			document.getElementById("dem").innerHTML = inpObj.validationMessage;
+		}else{
+			document.getElementById("dem").innerHTML = "Input Ok";
+		} 
+
+	}
+	function Solomax(){
+		let text;
+		if(document.getElementById("id2").validity.rangerOverflow){
+			text = "El numero es demasiado grande";
+		}else {
+			text = "Input OK"
+		}
+		document.getElementById(dem1).innerHTML=text;
+	}
+</script>
+</body>
+</html>
