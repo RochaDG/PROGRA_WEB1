@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Registro de usuarios</title>
+	 <style>
+        /* Estilo general para el cuerpo del documento */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5; /* Fondo suave para mejorar el contraste */
+        }
+
+        /* Estilo para el encabezado */
+        h3 {
+            color: #333; /* Texto oscuro para mejor legibilidad */
+            margin-bottom: 10px;
+        }
+
+        /* Estilo para el contenedor del formulario */
+        div {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd; /* Borde para separación visual */
+            border-radius: 8px; /* Bordes redondeados para suavidad */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para efecto de elevación */
+            max-width: 400px; /* Ancho máximo para mantener la forma */
+            margin: 0 auto; /* Centrando el contenedor */
+        }
+
+        /* Estilo para el formulario */
+        form {
+            display: flex;
+            flex-direction: column; /* Alineación vertical */
+        }
+
+        /* Estilo para etiquetas */
+        label {
+            font-weight: bold; /* Etiquetas en negrita para resaltar */
+            margin-bottom: 5px;
+        }
+
+        /* Estilo para campos de entrada */
+        input, textarea {
+            padding: 10px; /* Espaciado interno para comodidad */
+            border: 1px solid #ccc; /* Borde para separación */
+            border-radius: 4px; /* Bordes redondeados */
+            margin-bottom: 15px; /* Espaciado entre campos */
+            font-size: 16px; /* Tamaño de fuente legible */
+        }
+
+        /* Estilo para el botón de envío */
+        input[type="submit"] {
+            background-color: #4CAF50; /* Color de fondo para resaltar */
+            color: white; /* Texto blanco para contraste */
+            border: none; /* Sin bordes */
+            border-radius: 4px; /* Bordes redondeados */
+            padding: 10px 20px; /* Espaciado para comodidad */
+            cursor: pointer; /* Indicador de cursor */
+            font-size: 16px; /* Tamaño de fuente legible */
+        }
+
+        /* Estilo para el efecto hover en el botón de envío */
+        input[type="submit"]:hover {
+            background-color: #45a049; /* Cambio de color para interacción */
+        }
+    </style>
+</head>
+<body>
+
+<h3>Resgistro de usuarios</h3>
+
+<div>
+	<form action="php.php" method="post">
+		<label for="nombre">Nombre del usuario</label>
+		<input type="texrt" id="nombre" name="nombre" placeholder="user">
+
+		<label for="email">E-mail</label>
+		<input type="" id="email" name="email" placeholder="Email">
+
+		<label for="mensaje"></label>
+		<textarea id="mensaje" name="mensaje" ></textarea>
+
+		<input type="submit" id="submit" name="submit" value="Enviar formulario">
+	</form>
+</div>
+</body>
+</html>
