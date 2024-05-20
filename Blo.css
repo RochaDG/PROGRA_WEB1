@@ -1,0 +1,116 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(to right, #ffefba, #ffffff); 
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+/* Header Styles */
+h1 {
+    color: #ff6f61; 
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h2, h3, h4 {
+    color: #333333;
+}
+
+/* Post Styles */
+.post {
+    background: #ffffff;
+    padding: 20px;
+    border-left: 5px solid #ff6f61; 
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post h2 {
+    color: #ff6f61; 
+    margin-bottom: 10px;
+}
+
+.post p {
+    font-size: 1.1em;
+    line-height: 1.6em;
+    color: #555555;
+}
+
+/* Comments Section Styles */
+.comments-section {
+    margin-top: 30px;
+}
+
+.comments-section h3 {
+    color: #ff6f61; 
+    margin-bottom: 20px;
+}
+
+.comment {
+    background: #f8f8f8;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment:nth-child(odd) {
+    background: #e9ecef;
+}
+
+/* Comment Form Styles */
+.comment-form {
+    margin-top: 20px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment-form h4 {
+    color: #ff6f61; 
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    font-size: 1em;
+    box-sizing: border-box;
+    resize: vertical;
+    margin-top: 10px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: #ff6f61; 
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #e55a4f; 
+}

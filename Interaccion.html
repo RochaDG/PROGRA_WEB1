@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interraccion</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f06, #8346f5);
+            display: flex;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .div-principal {
+            display: flex;
+            max-width: 1000px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .div-izquierdo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.4);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .div-derecho {
+            text-align: center;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            max-width: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        textarea:focus {
+            background: rgba(255, 255, 255, 0.4);
+            outline: none;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #f06;
+            color: #fff;
+            border: none;
+            margin: 5px;
+            padding: 15px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #8346f5;
+            transform: scale(1.05);
+        }
+
+        .contenedor-redes {
+            padding: 10px;
+        }
+
+        .contenedor-logo img {
+            max-height: 100px;
+            border-radius: 50%;
+        }
+
+        .contenedor-text {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-principal">
+        <div class="div-izquierdo">
+            
+            <form action="mailto:davidrochagonzalezcap@gmail.com" method="post" enctype="text/plain">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="text" name="correo" placeholder="Correo Electrónico" required>
+                <textarea name="comentarios" cols="30" rows="10" placeholder="Mensaje" required></textarea>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Resetear">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

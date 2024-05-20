@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog con Comentarios</title>
+    <link rel="stylesheet" href="Blo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Convergencia Digital y gemelos digitales</h1>
+        
+        <div class="comments-section">
+            <h3>Comentarios</h3>
+            <div id="comments"></div>
+            <div class="comment-form">
+                <h4>Agregar un comentario</h4>
+                <textarea id="commentText" rows="4" placeholder="Escribe tu comentario aquí..."></textarea>
+                <button onclick="addComment()">Enviar</button>
+            </div>
+        </div>
+    </div>
+    <script >
+        document.addEventListener("DOMContentLoaded", () => {
+    loadComments();
+});
+
+function loadComments() {
+    let comments = JSON.parse(localStorage.getItem('comments')) || [];
+    let commentsContainer = document.getElementById('comments');
+    commentsContainer.innerHTML = '';
+    comments.forEach(comment => {
+        let commentDiv = document.createElement('div');
+        commentDiv.className = 'comment';
+        commentDiv.innerText = comment;
+        commentsContainer.appendChild(commentDiv);
+    });
+}
+
+function addComment() {
+    let commentText = document.getElementById('commentText').value;
+    if (commentText.trim() === '') {
+        alert('El comentario no puede estar vacío');
+        return;
+    }
+    let comments = JSON.parse(localStorage.getItem('comments')) || [];
+    comments.push(commentText);
+    localStorage.setItem('comments', JSON.stringify(comments));
+    document.getElementById('commentText').value = '';
+    loadComments();
+}
+    </script>
+</body>
+</html>
