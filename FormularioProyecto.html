@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Obtener totales del formulario</title>
+    <link rel="stylesheet" href="FormularioProyecto.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style type="text/css">
+        /* Estilos para el menú de navegación */
+.menu {
+    display: inline-block; /* Mostrar el elemento como un bloque en línea */
+    background: black; /* Color de fondo del menú */
+    padding: 10px 20px; /* Espaciado interno del menú */
+    text-decoration: none; /* Eliminar subrayado de los enlaces */
+    border-radius: 10px; /* Bordes redondeados del menú */
+    color: white; /* Color del texto */
+    transition: .5s; /* Transición suave para los cambios de estilo */
+}
+
+/* Estilos para el menú cuando se pasa el ratón por encima */
+.menu:hover {
+    background: green; /* Color de fondo del menú al pasar el ratón */
+    padding: 15px 25px; /* Incremento del espaciado interno al pasar el ratón */
+    color: #E3EA50; /* Color del texto al pasar el ratón */
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    background: black; /* Color de fondo de la barra de navegación */
+    justify-content: space-around; /* Distribuir los elementos de forma equitativa */
+    display: flex; /* Utilizar el modelo de caja flexible */
+    padding: 10px; /* Espaciado interno de la barra de navegación */
+    border-radius: 10px; /* Bordes redondeados de la barra de navegación */
+}
+
+    </style>  
+</head>
+<body>
+    <nav>
+        <a href="Proyecto.html" class="menu">Pagina principal</a>
+        <a href="" class="menu">Interacción</a>
+        <a href="" class="menu">Blog</a>
+        <a href="Img.html" class="menu">Imágenes</a>
+        <a href="Preguntas.html" class="menu">Preguntas</a>
+    </nav>
+
+    <div id="contiene">
+        <h1>Responde la encuesta</h1>
+        <h2>Tu opinión es importante</h2>
+        <div>
+            <form>
+                <ul>
+                    <li>¿Qué es un gemelo digital?</li>
+                    <input type="radio" name="r1" id="r1" value="5"/>A) Una réplica virtual de un objeto o sistema físico<br/>
+                    <input type="radio" name="r1" id="r1" value="0"/>B) Un algoritmo de inteligencia artificial<br/>
+                    <input type="radio" name="r1" id="r1" value="0"/>C) Un tipo de red informática<br/>
+                    <input type="radio" name="r1" id="r1" value="0"/>D) Una tecnología de realidad aumentada<br/><br/>
+                    
+                    <li>¿En qué industria se utilizan ampliamente los gemelos digitales?</li>
+                    <input type="radio" name="r2" id="r2" value="5"/>A) Manufactura e ingeniería<br/>
+                    <input type="radio" name="r2" id="r2" value="0"/>B) Educación<br/>
+                    <input type="radio" name="r2" id="r2" value="0"/>C) Publicidad<br/>
+                    <input type="radio" name="r2" id="r2" value="0"/>D) Ventas minoristas<br/><br/>
+
+                    <li>¿Cuál es el propósito principal de un gemelo digital?</li>
+                    <input type="radio" name="r3" id="r3" value="5"/>A) Simular y analizar el rendimiento de un objeto o sistema en tiempo real<br/>
+                    <input type="radio" name="r3" id="r3" value="0"/>B) Crear experiencias de realidad virtual para el entretenimiento<br/>
+                    <input type="radio" name="r3" id="r3" value="0"/>C) Automatizar procesos industriales<br/>
+                    <input type="radio" name="r3" id="r3" value="0"/>D) Optimizar redes de comunicaciones<br/><br/>
+
+                    <li>¿Qué tecnología es esencial para la creación de gemelos digitales?</li>
+                    <input type="radio" name="r4" id="r4" value="5"/>A) Internet de las cosas (IoT)<br/>
+                    <input type="radio" name="r4" id="r4" value="0"/>B) Realidad aumentada<br/>
+                    <input type="radio" name="r4" id="r4" value="0"/>C) Blockchain<br/>
+                    <input type="radio" name="r4" id="r4" value="0"/>D) Reconocimiento facial<br/><br/>
+                    
+                    <li>¿Qué es la convergencia digital?</li>
+                    <input type="radio" name="r5" id="r5" value="5"/>A) La integración de diferentes tecnologías y servicios en una sola plataforma<br/>
+                    <input type="radio" name="r5" id="r5" value="0"/>B) La fusión de dispositivos físicos y digitales<br/>
+                    <input type="radio" name="r5" id="r5" value="0"/>C) El uso de inteligencia artificial para conectar datos<br/>
+                    <input type="radio" name="r5" id="r5" value="0"/>D) La conexión de redes locales y globales<br/><br/>
+
+                    <li>¿Qué es una aplicación típica de la convergencia digital?</li>
+                    <input type="radio" name="r6" id="r6" value="5"/>A) Dispositivos inteligentes que combinan múltiples funciones<br/>
+                    <input type="radio" name="r6" id="r6" value="0"/>B) Algoritmos de aprendizaje automático<br/>
+                    <input type="radio" name="r6" id="r6" value="0"/>C) Aplicaciones de juegos en línea<br/>
+                    <input type="radio" name="r6" id="r6" value="0"/>D) Programas de edición de video<br/><br/>
+
+                    <li>¿Qué beneficios ofrece la convergencia digital?</li>
+                    <input type="radio" name="r7" id="r7" value="5"/>A) Integración de servicios y simplificación de procesos<br/>
+                    <input type="radio" name="r7" id="r7" value="0"/>B) Mayor seguridad y privacidad<br/>
+                    <input type="radio" name="r7" id="r7" value="0"/>C) Reducción de costos de hardware<br/>
+                    <input type="radio" name="r7" id="r7" value="0"/>D) Incremento en la producción de contenido digital<br/><br/>
+
+                    <li>¿Cuál es el impacto de la convergencia digital en la vida cotidiana?</li>
+                    <input type="radio" name="r8" id="r8" value="5"/>A) Facilita el acceso a servicios y mejora la conectividad<br/>
+                    <input type="radio" name="r8" id="r8" value="0"/>B) Limita las opciones de comunicación<br/>
+                    <input type="radio" name="r8" id="r8" value="0"/>C) Aumenta la dependencia de dispositivos físicos<br/>
+                    <input type="radio" name="r8" id="r8" value="0"/>D) Disminuye la eficiencia en la gestión del tiempo<br/><br/>
+
+                    <li>¿Qué desafíos presenta la convergencia digital?</li>
+                    <input type="radio" name="r9" id="r9" value="5"/>A) Seguridad de la información y privacidad de los datos<br/>
+                    <input type="radio" name="r9" id="r9" value="0"/>B) Escasez de dispositivos digitales<br/>
+                    <input type="radio" name="r9" id="r9" value="0"/>C) Alta complejidad de implementación<br/>
+                    <input type="radio" name="r9" id="r9" value="0"/>D) Reducción de la interacción humana<br/><br/>
+
+                    <li>¿Cómo se relacionan los gemelos digitales con la convergencia digital?</li>
+                    <input type="radio" name="r10" id="r10" value="5"/>A) Utilizan datos de diferentes fuentes para crear una representación virtual<br/>
+                    <input type="radio" name="r10" id="r10" value="0"/>B) Fomentan la desconexión de servicios digitales<br/>
+                    <input type="radio" name="r10" id="r10" value="0"/>C) Reducen la necesidad de tecnología IoT<br/>
+                    <input type="radio" name="r10" id="r10" value="0"/>D) Incrementan la complejidad de la infraestructura física<br/><br/>
+                </ul>
+                <input type="button" value="Calificar" onclick="obtenerTotales()">
+            </form>
+        </div>
+        <div id="totales" style="margin-top: 20px;">
+            <!-- Aquí se mostrarán los totales y el PDF generado -->
+        </div>
+    </div>
+    
+    <script>
+        function obtenerTotales() {
+            let total = 0;
+            for (let i = 1; i <= 10; i++) {
+                let radios = document.getElementsByName("r" + i);
+                for (let j = 0; j < radios.length; j++) {
+                    if (radios[j].checked) {
+                        total += parseInt(radios[j].value);
+                    }
+                }
+            }
+
+            let porcentaje = (total / 50) * 100; // 50 es el total de puntos posibles
+            let contenedorTotales = document.getElementById("totales");
+            contenedorTotales.innerHTML = "<p>Total de puntos: " + total + "</p>";
+            contenedorTotales.innerHTML += "<p>Porcentaje: " + porcentaje + "%</p>";
+
+            generar(total, porcentaje);
+        }
+
+        async function generar(total, porcentaje) {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            doc.text("Resultados de la encuesta", 10, 10);
+            doc.text("Total de puntos: " + total, 10, 20);
+            doc.text("Porcentaje: " + porcentaje + "%", 10, 30);
+
+            const pdfDataUri = doc.output('datauristring');
+
+            let iframe = document.createElement("iframe");
+            iframe.style.width = "100%";
+            iframe.style.height = "500px";
+            iframe.src = pdfDataUri;
+
+            const contenedorTotales = document.getElementById("totales");
+            contenedorTotales.appendChild(iframe);
+        }
+    </script>
+</body>
+</html>

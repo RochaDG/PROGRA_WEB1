@@ -1,47 +1,90 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Imagenes y videos
-        </title>
-        <link rel="stylesheet" type="text/css" href="Img_css.css">
-    </head>
-    <body>
-        <div id="conjunto">
-            <div id="div_memes">
-                <h2>Memes</h2>
-                <br>
-                <img  class="imgs" src="https://sixphere.com/wp-content/uploads/2022/05/meme.png" >
-                <img  class="imgs" src="https://cdn.memegenerator.es/imagenes/memes/full/32/42/32425901.jpg" >
-                <img class="imgs" src="https://derechosanimalesya.org/media/posts/920/%C2%A1Derechos-Animales-ya-Pel%C3%ADcula-Yo-robot-escena-sobre-componer-m%C3%BAsica-o-pintura.jpg">
-                <img class="imgs" src="https://files.maldita.es/uploads/2023/12/658c51be3ee31file-jpg.jpg">
-                <img class="imgs" src="https://files.maldita.es/uploads/2023/12/658c51c8220a0file-jpg.jpg"> 
-                <img class="imgs" src="https://files.maldita.es/uploads/2023/12/658c51d6635d6file-jpg.jpg">
-            </div>
+<head>
+    <title>Imagenes y videos</title>
+    <!-- Vincula una hoja de estilos CSS externa -->
+    <link rel="stylesheet" type="text/css" href="Img_css.css">
+    <!-- Estilos CSS internos -->
+    <style type="text/css">
+        /* Estilos para los enlaces del menú */
+        .menu {
+            display: inline-block; /* Muestra el elemento en bloque en línea */
+            background: black; /* Fondo negro */
+            padding: 10px 20px; /* Relleno */
+            text-decoration: none; /* Sin subrayado */
+            border-radius: 10px; /* Bordes redondeados */
+            color: white; /* Color del texto blanco */
+            transition: .5s; /* Transición de medio segundo */
+        }
+        .menu:hover {
+            background: green; /* Fondo verde al pasar el ratón */
+            padding: 15px 25px; /* Aumenta el relleno */
+            color: #E3EA50; /* Color del texto amarillo */
+        }
+        /* Estilos para el contenedor de navegación */
+        nav {
+            background: black; /* Fondo negro */
+            justify-content: space-around; /* Espaciado uniforme entre elementos */
+            display: flex; /* Uso de flexbox */
+            padding: 10px; /* Relleno */
+            border-radius: 10px; /* Bordes redondeados */
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav>
+        <a href="Proyecto.html" class="menu">Pagina principal</a>
+        <a href="Interaccion.html" class="menu">Interaccion</a>
+        <a href="Blo.html" class="menu">Blog</a>
+        <a href="FormularioProyecto.html" class="menu">Encuesta</a>
+        <a href="Preguntas.html" class="menu">Preguntas</a>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <div id="conjunto">
+        <!-- Sección de memes -->
+        <div id="div_memes">
+            <h2>Memes</h2>
             <br>
-            <div id="div_imag">
-                <h2>Imagenes</h2>
-                <br>
-                <img  class="imgi" src="https://energiahoy.com/wp-content/uploads/2022/10/gemelos-870x441.jpg">
-                <img  class="imgi" src="https://consumotic.mx/wp-content/uploads/2021/09/210930_03-750x375.jpg">
-                <img  class="imgi" src="https://www.evertecinc.com/wp-content/uploads/2022/11/tres-fuerzas-de-convergencia.jpg">
-                <img  class="imgi" src="https://img.freepik.com/fotos-premium/futuro-internet-tecnologia-convergencia-digital-convergencia-tecnologica_505353-89.jpg?w=826">
-                <img  class="imgi" src="https://www.patricialiebanas.com/wp-content/uploads/2020/05/omnicanal-estrategia-marketing-digital.jpg">
-                <img  class="imgi" src="https://www.eluniversal.com.co/binrepository/1200x675/0c0/0d0/none/13704/DSKF/147123977-l_4177097_20210205190823.jpg">
-            </div>
+            <!-- Imágenes de memes -->
+            <img class="imgs" src="https://sixphere.com/wp-content/uploads/2022/05/meme.png">
+            <img class="imgs" src="https://cdn.memegenerator.es/imagenes/memes/full/32/42/32425901.jpg">
+            <img class="imgs" src="https://derechosanimalesya.org/media/posts/920/%C2%A1Derechos-Animales-ya-Pel%C3%ADcula-Yo-robot-escena-sobre-componer-m%C3%BAsica-o-pintura.jpg">
+            <img class="imgs" src="https://files.maldita.es/uploads/2023/12/658c51be3ee31file-jpg.jpg">
+            <img class="imgs" src="https://files.maldita.es/uploads/2023/12/658c51c8220a0file-jpg.jpg">
+            <img class="imgs" src="https://files.maldita.es/uploads/2023/12/658c51d6635d6file-jpg.jpg">
+        </div>
+        <!-- Sección de imágenes -->
+        <div id="div_imag">
+            <h2>Imagenes</h2>
             <br>
-            <div id="div_video">
-                <h2>Videos</h2>
-                <br>
-                <iframe width="500" height="315" src="https://www.youtube.com/embed/wpVXRp38im0?si=oXw3xfXPsf9XwIwt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe width="500" height="315" src="https://www.youtube.com/embed/ukTl87hHYIg?si=P8xyllPBvc8hrXXx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe width="500" height="315" src="https://www.youtube.com/embed/ML4QdyYloV4?si=SNDgGkS5B5LA1l6Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe width="500" height="315" src="https://www.youtube.com/embed/qK5NBn2r-ok?si=jfOnQ5VLvyZzx28E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <!-- Imágenes variadas -->
+            <img class="imgi" src="https://energiahoy.com/wp-content/uploads/2022/10/gemelos-870x441.jpg">
+            <img class="imgi" src="https://consumotic.mx/wp-content/uploads/2021/09/210930_03-750x375.jpg">
+            <img class="imgi" src="https://www.evertecinc.com/wp-content/uploads/2022/11/tres-fuerzas-de-convergencia.jpg">
+            <img class="imgi" src="https://img.freepik.com/fotos-premium/futuro-internet-tecnologia-convergencia-digital-convergencia-tecnologica_505353-89.jpg?w=826">
+            <img class="imgi" src="https://www.patricialiebanas.com/wp-content/uploads/2020/05/omnicanal-estrategia-marketing-digital.jpg">
+            <img class="imgi" src="https://www.eluniversal.com.co/binrepository/1200x675/0c0/0d0/none/13704/DSKF/147123977-l_4177097_20210205190823.jpg">
+        </div>
+        <!-- Sección de videos -->
+        <div id="div_video">
+            <h2>Videos</h2>
+            <br>
+            <!-- Contenedores de videos de YouTube -->
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/wpVXRp38im0?si=oXw3xfXPsf9XwIwt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/ukTl87hHYIg?si=P8xyllPBvc8hrXXx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/ML4QdyYloV4?si=SNDgGkS5B5LA1l6Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/qK5NBn2r-ok?si=jfOnQ5VLvyZzx28E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
-    </body>
+    </div>
+</body>
 </html>

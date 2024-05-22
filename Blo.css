@@ -1,4 +1,4 @@
-/* General Styles */
+/* Estilos generales */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background: linear-gradient(to right, #ffefba, #ffffff); 
@@ -6,6 +6,7 @@ body {
     padding: 0;
 }
 
+/* Contenedor principal */
 .container {
     width: 80%;
     margin: auto;
@@ -17,7 +18,7 @@ body {
     margin-top: 30px;
 }
 
-/* Header Styles */
+/* Estilos del encabezado */
 h1 {
     color: #ff6f61; 
     text-align: center;
@@ -29,7 +30,7 @@ h2, h3, h4 {
     color: #333333;
 }
 
-/* Post Styles */
+/* Estilos de las entradas */
 .post {
     background: #ffffff;
     padding: 20px;
@@ -50,7 +51,7 @@ h2, h3, h4 {
     color: #555555;
 }
 
-/* Comments Section Styles */
+/* Estilos de la sección de comentarios */
 .comments-section {
     margin-top: 30px;
 }
@@ -72,7 +73,7 @@ h2, h3, h4 {
     background: #e9ecef;
 }
 
-/* Comment Form Styles */
+/* Estilos del formulario de comentarios */
 .comment-form {
     margin-top: 20px;
     background: #ffffff;
@@ -113,4 +114,30 @@ button {
 
 button:hover {
     background: #e55a4f; 
+}
+
+/* Estilos del menú de navegación */
+.menu {
+    display: inline-block;
+    background: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    color: white;
+    transition: .5s;
+}
+
+.menu:hover {
+    background: green;
+    padding: 15px 25px;
+    color: #E3EA50;
+}
+
+/* Estilos de la barra de navegación */
+nav {
+    background: black;
+    justify-content: space-around;
+    display: flex;
+    padding:10px;
+    border-radius: 10px;
 }

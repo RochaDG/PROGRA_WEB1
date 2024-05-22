@@ -1,41 +1,63 @@
-body{
-    background: white;
+/* Estilos generales del cuerpo de la página */
+body {
+    background: #E591EF; /* Color de fondo */
 }
-#conjunto{
-    padding: 50px 50px 50px 50px;
-    height: 2450px;
-    width: 1220px;
-}
-#div_memes{
-    padding: 50px 50px 50px 50px;
-    border: 2px solid black ;
-    height: 700px;
-    border-radius: 20px;
-    background: #F9FF9A;
-}
-#div_imag{
-    padding: 50px 50px 50px 50px;
-    border: 2px solid black ;
-    height: 700px;
-    border-radius: 20px;
-    background: #9AFFCB;
-}
-h2{
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-}
-.imgs{
+
+/* Estilos del contenedor principal */
+#conjunto {
+    padding: 5% 5% 5% 5%; /* Espaciado interno */
     width: auto;
-    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrado horizontal */
 }
-.imgi{
-    width: auto;
-    height: 200px;
+
+/* Estilos de los contenedores de memes, imágenes y videos */
+#div_memes,
+#div_imag,
+#div_video {
+    padding: 2%; /* Espaciado interno */
+    border: 2px solid black; /* Borde */
+    border-radius: 20px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Margen inferior */
+    width: 90%; /* Ancho */
+    max-width: 600px; /* Ancho máximo */
+    background: white; /* Color de fondo */
 }
-#div_video{
-    padding: 50px 50px 50px 50px;
-    border: 2px solid black ;
-    height: 700px;
-    border-radius: 20px; 
-    background: #FF5E54;
+
+/* Estilos para títulos */
+h2 {
+    text-align: center; /* Alineación centrada */
+    font-family: 'Times New Roman', Times, serif; /* Fuente */
+}
+
+/* Estilos para imágenes de memes */
+.imgs {
+    width: 100%; /* Ancho completo */
+    height: auto; /* Altura automática */
+}
+
+/* Estilos para imágenes */
+.imgi {
+    width: 100%; /* Ancho completo */
+    height: auto; /* Altura automática */
+}
+
+/* Estilos para contenedor de videos */
+.video-container {
+    position: relative; /* Posición relativa */
+    padding-bottom: 56.25%; /* Proporción del video (16:9) */
+    height: 0;
+    overflow: hidden; /* Ocultar desbordamiento */
+    margin-bottom: 20px; /* Margen inferior */
+    width: 100%; /* Ancho completo */
+}
+
+/* Estilos para videos dentro del contenedor */
+.video-container iframe {
+    position: absolute; /* Posición absoluta */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
 }

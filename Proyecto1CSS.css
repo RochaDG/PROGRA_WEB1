@@ -1,142 +1,151 @@
-﻿body {
+﻿/* Elimina los márgenes y rellenos del cuerpo, y establece una altura de 2000px */
+body {
     margin: 0;
     padding: 0;
     height: 2000px;
 }
+
+/* Estilos para los encabezados de nivel 3 */
 h3 {
-    font-family: Consolas;
-    text-align: center;
-    background: linear-gradient(90deg, #A5B615, gray);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-family: Consolas; /* Fuente Consolas */
+    text-align: center; /* Alineación centrada del texto */
+    background: linear-gradient(90deg, #A5B615, gray); /* Degradado de fondo */
+    -webkit-background-clip: text; /* Clip de fondo para Webkit */
+    background-clip: text; /* Clip de fondo */
+    -webkit-text-fill-color: transparent; /* Relleno de texto transparente para Webkit */
 }
-p{
-    text-align: justify;
-    font-family: Arial, sans-serif;
+
+/* Estilos para los párrafos */
+p {
+    text-align: justify; /* Justifica el texto */
+    font-family: Arial, sans-serif; /* Fuente Arial, con respaldo sans-serif */
 }
+
+/* Clase para animación de color de fondo */
 .background-color-animation {
     background-color: #00f; /* Color de fondo inicial */
-    animation: changeColor 10s infinite; /* Duración de la animación y repetición infinita */
+    animation: changeColor 10s infinite; /* Animación con duración de 10s y repetición infinita */
 }
 
+/* Definición de la animación para cambiar el color de fondo */
 @keyframes changeColor {
     0% {
-        background-color: #A3D3E5; /* Color de fondo inicial */
+        background-color: #A3D3E5; /* Color de fondo al inicio */
     }
-
     25% {
-        background-color: #9AC976; /* Color de fondo intermedio */
+        background-color: #9AC976; /* Color de fondo a los 25% */
     }
     50% {
-        background-color: #EEC18B; /* Color de fondo intermedio */
+        background-color: #EEC18B; /* Color de fondo a los 50% */
     }
     75% {
-        background-color: #CAB8DF; /* Color de fondo intermedio */
+        background-color: #CAB8DF; /* Color de fondo a los 75% */
     }
     100% {
-        background-color: #A3D3E5; /* Color de fondo final */
+        background-color: #A3D3E5; /* Color de fondo al final */
     }
 }
-#te{
-    color: Red;
+
+/* Estilos para elementos con id específicos */
+#te {
+    color: Red; /* Color rojo para el texto */
 }
-#Alumno1{
-    color: #99499B ;
+#Alumno1 {
+    color: #99499B; /* Color púrpura */
 }
-#Alumno2{
-    color:#49729B ;
-}
-.menu {
-    display: inline-block;
-    background: black;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 10px;
-    color: white;
-    transition: .5s;
-}
-.menu:hover{
-    background: green;
-    padding: 15px 25px;
-    color: #E3EA50;
-}
-nav {
-    background: black;
-    justify-content: space-around;
-    display: flex;
-    padding:10px;
+#Alumno2 {
+    color: #272830; /* Color gris oscuro */
 }
 
-table{
-    border: 2px solid black;
-    border-collapse: collapse;
-    text-align: justify;
-    padding: 5px 10px;
+/* Estilos para enlaces del menú */
+.menu {
+    display: inline-block; /* Display en bloque en línea */
+    background: black; /* Fondo negro */
+    padding: 10px 20px; /* Relleno */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 10px; /* Bordes redondeados */
+    color: white; /* Color del texto blanco */
+    transition: .5s; /* Transición de medio segundo */
 }
-th, td{
-    align-content: center;
-    text-align: justify;
-    font-family: 'Courier New', Courier, monospace;
-    padding: 10px;
-    border: 3px solid black;
+.menu:hover {
+    background: green; /* Fondo verde al pasar el ratón */
+    padding: 15px 25px; /* Aumenta el relleno */
+    color: #E3EA50; /* Color del texto amarillo */
 }
-th{
-    text-align: center;
-    transition: 1s;
+
+/* Estilos para el contenedor de navegación */
+nav {
+    background: black; /* Fondo negro */
+    justify-content: space-around; /* Espaciado uniforme entre elementos */
+    display: flex; /* Uso de flexbox */
+    padding: 10px; /* Relleno */
+    border-radius: 10px; /* Bordes redondeados */
 }
-th:hover{
-    background-color: #D6F796;
+
+/* Estilos para tablas */
+table {
+    border: 2px solid black; /* Borde negro de 2px */
+    border-collapse: collapse; /* Colapsa los bordes */
+    text-align: justify; /* Justifica el texto */
+    padding: 5px 10px; /* Relleno */
 }
-thead{
-    align-content: center;
-    text-align: center;
-    font-family: cursive;
-    color:maroon;
+th, td {
+    align-content: center; /* Centrado de contenido */
+    text-align: justify; /* Justifica el texto */
+    font-family: 'Courier New', Courier, monospace; /* Fuente Courier */
+    padding: 10px; /* Relleno */
+    border: 3px solid black; /* Borde negro de 3px */
 }
-td{
-    transition: 1s;
+th {
+    text-align: center; /* Centra el texto */
+    transition: 1s; /* Transición de un segundo */
 }
-td:hover{
-    background-color: #C3A1F6;
+th:hover {
+    background-color: #D6F796; /* Fondo verde claro al pasar el ratón */
 }
-.linksderef{
-    text-decoration: none;
-    text-decoration-color: #A5B615;
+thead {
+    align-content: center; /* Centra el contenido */
+    text-align: center; /* Centra el texto */
+    font-family: cursive; /* Fuente cursiva */
+    color: maroon; /* Color marrón */
 }
-#ccuadro1{
-    width: auto;
-    height: auto;
-    padding: 20px 100px 20px 100px;
+td {
+    transition: 1s; /* Transición de un segundo */
 }
-#cuadro1{
-    background: white;
-    width: auto;
-    height: auto;
-    border-radius: 15px;
-    border: 2px solid gray;
+td:hover {
+    background-color: #C3A1F6; /* Fondo púrpura claro al pasar el ratón */
 }
-#ccuadro2{
-    width: auto;
-    height: auto;
-    padding: 20px 100px 20px 100px;
+
+/* Estilos para enlaces de referencia */
+.linksderef {
+    text-decoration: none; /* Sin subrayado */
+    text-decoration-color: #A5B615; /* Color de subrayado verde */
+    color: #356644; /* Color verde oscuro */
 }
-#cuadro2{
-    background: white;
-    width: auto;
-    height: auto;
-    border-radius: 15px;
-    border: 2px solid gray;
+
+/* Estilos para contenedores específicos */
+#ccuadro1, #ccuadro2, #ccuadro3, #ccuadro4 {
+    width: auto; /* Ancho automático */
+    height: auto; /* Altura automática */
+    padding: 20px 100px; /* Relleno */
 }
-#ccuadro3{
-    width: auto;
-    height: auto;
-    padding: 20px 100px 20px 100px;
+#cuadro1, #cuadro2, #cuadro3, #cuadro4 {
+    background: white; /* Fondo blanco */
+    width: auto; /* Ancho automático */
+    height: auto; /* Altura automática */
+    border-radius: 15px; /* Bordes redondeados */
+    border: 2px solid gray; /* Borde gris */
+    padding: 20px; /* Relleno */
 }
-#cuadro3{
-    background: white;
-    width: auto;
-    height: auto;
-    border-radius: 15px;
-    border: 2px solid gray;
+
+/* Estilos para la clase imgshtml */
+.imgshtml {
+    display: flex; /* Uso de flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+.imgshtml img {
+    max-width: 100%; /* Ancho máximo 100% */
+    max-height: 100%; /* Altura máxima 100% */
+    height: auto; /* Mantiene la proporción de la imagen */
 }

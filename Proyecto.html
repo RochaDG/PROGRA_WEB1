@@ -6,45 +6,117 @@
     <title>Convergencia digital y gemelos digitales</title>
     <link rel="icon" type="IMGPAG/jpeg" href="Proyecto/IMGPAG.jpeg">
     <link rel="stylesheet" type="text/css" href="Proyecto1CSS.css">
+    <style>
+        main {
+            padding: 20px;/*Para darle un espaciado entre el cpntenedor blanco y el texto*/
+        }
+        footer {/*Para darle un estilo al pie de pagina*/
+            background-color: #50504db0;
+            color: rgb(235, 231, 231);
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        footer img {/*Para que la imagen del pie de pagina se mantenga a la derecha y tenga un tamaño especifico*/
+            max-width: 50px;
+            margin-right: 10px;
+        }
+    </style>
+
+<!--Script de la grafica-->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        // Cargar la biblioteca de visualización y el paquete 'corechart'
+        google.charts.load('current', {'packages':['corechart']});
+
+        // Establecer una función de devolución de llamada para dibujar el gráfico
+        google.charts.setOnLoadCallback(drawChart);
+
+        // Función para configurar y dibujar el gráfico
+        function drawChart() {
+            // Datos del gráfico
+            var data = google.visualization.arrayToDataTable([
+                ['Aspecto', 'Porcentaje de Aumento', { role: 'style' }],
+                ['Adopción Generalizada', 85, '#3366cc'],      // Promedio del 80-90%
+                ['Mejora de Eficiencia y Productividad', 55, '#dc3912'],  // Promedio del 50-60%
+                ['Impacto en la Sociedad', 65, '#ff9900'],     // Promedio del 60-70%
+                ['Innovación Continua', 75, '#109618']        // Promedio del 70-80%
+            ]);
+
+            // Opciones de configuración del gráfico
+            var options = {
+                title: 'Proyecciones de la Convergencia Digital y Gemelos Digitales',
+                bar: {groupWidth: '75%'},
+                legend: { position: 'none' },
+                hAxis: {
+                    title: 'Aspecto',
+                },
+                vAxis: {
+                    title: 'Porcentaje de Aumento (%)',
+                    minValue: 0,
+                    maxValue: 100
+                }
+            };
+
+            // Crear el gráfico y dibujarlo en el contenedor
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+     <style>
+        /* Estilos para hacer el gráfico responsivo */
+        #chart_div {
+            width: 100%;
+            max-width: 600px ;/* Opcional: puedes establecer un ancho máximo */
+            margin: 0 auto; /* Para centrar el gráfico */
+            align-items: center;
+        }
+    </style>
+
+
 </head>
-<body class="background-color-animation" >
+<body class="background-color-animation">
+
     <!--Chatbot-->
     <script type="text/javascript">
         var vsid = "si271239fdc29b8";
         (function() { 
-        var vsjs = document.createElement('script'); vsjs.type = 'text/javascript'; vsjs.async = true; vsjs.setAttribute('defer', 'defer');
-         vsjs.src = 'https://www.virtualspirits.com/vsa/chat.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vsjs, s);
+            var vsjs = document.createElement('script'); vsjs.type = 'text/javascript'; vsjs.async = true; vsjs.setAttribute('defer', 'defer');
+            vsjs.src = 'https://www.virtualspirits.com/vsa/chat.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vsjs, s);
         })();
-       </script>
-       
-       
+    </script>
 
-
+    
     <header>
+        <br>
+        <div>
+            <img style="float: left;" src="https://www.eleconomista.com.mx/__export/1660696907176/sites/eleconomista/img/2022/08/16/transformacion_digital_negocio_depende_cinco_pasos.jpg_364214927.jpg" width="100px" height="50px">
+            <img style="float: right;" src="https://www.upslp.edu.mx/upslp/wp-content/themes/icemagtheme/images/demo/icemaglogo.png" width="125px" height="50px">
+        </div>
+        <div>
+            <h1 style="color: #B04B4B; text-align: center;">Convergencia digital y gemelos digitales</h1><!--Titulo de la pagina-->
+        </div>
 
-        </div>
-        <div style="text-align: right ;">
-            <!--Imagen logo-->
-            <img src="https://www.upslp.edu.mx/upslp/wp-content/themes/icemagtheme/images/demo/icemaglogo.png" width="125px" height="50px">
-        </div>
-        <center>
-            <h1 style="color: #B04B4B">Convergencia digital y gemelos digitales</h1>
-        </center>
-        <div style="text-align: left ;">
-            <img src="https://www.eleconomista.com.mx/__export/1660696907176/sites/eleconomista/img/2022/08/16/transformacion_digital_negocio_depende_cinco_pasos.jpg_364214927.jpg" width="100px" height="50px">
-            <hr width="100%" size="1" noshade="" color="Black" />
     </header>
+    <br>
 
     <!--Menu-->
-
     <nav>
-        <a  href="Img.html" class="menu">Imagenes</a>
-        <a  href="" class="menu">Blog</a>
-        <a  href="FormularioProyecto.html" class="menu">Encuesta</a>
-        <a  href="Preguntas.html" class="menu">Preguntas</a>
+        <a href="Img.html" class="menu">Imagenes</a>
+        <a href="Interaccion.html" class="menu">Interaccion</a>
+        <a href="Blo.html" class="menu">Blog</a>
+        <a href="FormularioProyecto.html" class="menu">Encuesta</a>
+        <a href="Preguntas.html" class="menu">Preguntas</a>
     </nav>
 
+    <!--Cuadro 1-->
     <div id="ccuadro1">
         <div id="cuadro1">
             <center>
@@ -71,7 +143,9 @@
                 <p align="justify">
                     Los gemelos digitales son una tecnología disruptiva que está revolucionando la industria y será fundamental para las fábricas 4.0. No obstante, su ámbito de aplicación es amplio y puede abarcar desde el análisis digital de una nave industrial hasta la simulación en 3D de un edificio de 8 siglos de historia como es la Catedral de León, para la que en Plain Concepts empleamos point cloud, robótica y el motor gráfico Evergine. La unión de todas estas tecnologías ofrece como resultado una visualización tridimensional de un edificio en muy poco tiempo y con una precisión extraordinaria.
                 </p>
-                <img style="border-radius: 15px;" src="https://rockwellautomation.scene7.com/is/image/rockwellautomationstage/at60digitaltwins-support-1276791730-848w477h.848.jpg" width="200px" height="150px">
+                <div class="imgshtml">
+                    <img style="border-radius: 15px;" src="https://rockwellautomation.scene7.com/is/image/rockwellautomationstage/at60digitaltwins-support-1276791730-848w477h.848.jpg" width="200px" height="150px">
+                </div>
             </section>
         </div>
     </div>
@@ -87,11 +161,11 @@
             <div class="imacto">
                 <div class="texto_impacto">
                     <p align="justify">
-                    En la industria, uno de los sectores donde más aplicaciones se están dando, el gemelo digital supone una representación virtual detallada de una instalación industrial o del proceso de producción en todo su ciclo de vida. Un gemelo digital puede generarse para fábricas totalmente nuevas o para plantas que ya se encuentran en funcionamiento para, por ejemplo, integrar o rediseñar una línea de producción en un sistema existente.
-                    Según el informe «Digital Twins: Adding Intelligence to the Real World” del Instituto de Investigación Capgemini, el 60% de las organizaciones ya está utilizando esta tecnología de simulación y se espera que su uso aumente en un 36% en los próximos 5 años.
+                        En la industria, uno de los sectores donde más aplicaciones se están dando, el gemelo digital supone una representación virtual detallada de una instalación industrial o del proceso de producción en todo su ciclo de vida. Un gemelo digital puede generarse para fábricas totalmente nuevas o para plantas que ya se encuentran en funcionamiento para, por ejemplo, integrar o rediseñar una línea de producción en un sistema existente.
+                        Según el informe «Digital Twins: Adding Intelligence to the Real World” del Instituto de Investigación Capgemini, el 60% de las organizaciones ya está utilizando esta tecnología de simulación y se espera que su uso aumente en un 36% en los próximos 5 años.
                     </p>
                 </div>
-                <div class="img_impacto">
+                <div class="imgshtml">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPTwIsGAOVp458HG_yNKGP43uNdjbsDI_l7A&usqp=CAU">
                 </div>
             </div>
@@ -100,9 +174,9 @@
             <table>
                 <thead>
                     <tr>
-                    <th>Convergencia digital</th>
-                    <th>Gemelos digitales</th>
-                </tr>
+                        <th>Convergencia digital</th>
+                        <th>Gemelos digitales</th>
+                    </tr>
                 </thead>
                 <tr>
                     <td>
@@ -131,52 +205,105 @@
         </div>
     </div>
     </section>
+
+    <!--Cuadro 3-->
     <div id="ccuadro3">
-    <div id="cuadro3">
-    <h3 style="text-align: center;">Situacion actual</h3>
-    <p>Los gemelos digitales son representaciones virtuales de sistemas del mundo real cada vez más utilizadas en varios sectores.
-    En la construcción, se emplean para planificar proyectos residenciales, comerciales e infraestructuras, ofreciendo panoramas en tiempo real de su progreso.
-    Los arquitectos combinan el modelado 3D con la tecnología de gemelos digitales para la planificación. En la fabricación, son útiles en diseño, planificación y mantenimiento, permitiendo supervisar el equipo y analizar datos de rendimiento. En el sector energético, apoyan la planificación de proyectos y optimización de activos.
-    En la industria automotriz, se crean modelos digitales de vehículos para comprender su comportamiento físico y de software, y para el mantenimiento predictivo. En el ámbito de la salud, se utilizan para crear modelos virtuales de hospitales, instalaciones de salud y cuerpos humanos, permitiendo realizar simulaciones para comprender cómo responden los pacientes a determinados tratamientos.</p>
+        <div id="cuadro3">
+            <h3 style="text-align: center;">Situacion actual</h3>
+            <p>Los gemelos digitales son representaciones virtuales de sistemas del mundo real cada vez más utilizadas en varios sectores.
+            En la construcción, se emplean para planificar proyectos residenciales, comerciales e infraestructuras, ofreciendo panoramas en tiempo real de su progreso.
+            Los arquitectos combinan el modelado 3D con la tecnología de gemelos digitales para la planificación. En la fabricación, son útiles en diseño, planificación y mantenimiento, permitiendo supervisar el equipo y analizar datos de rendimiento. En el sector energético, apoyan la planificación de proyectos y optimización de activos.
+            En la industria automotriz, se crean modelos digitales de vehículos para comprender su comportamiento físico y de software, y para el mantenimiento predictivo. En el ámbito de la salud, se utilizan para crear modelos virtuales de hospitales, instalaciones de salud y cuerpos humanos, permitiendo realizar simulaciones para comprender cómo responden los pacientes a determinados tratamientos.</p>
     
-    <div style="text-align: center;">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy9UPhHttQ0IPPaxkdHtr7UskfaAOveUvZwg&usqp=CAU">
-    </div>
-    <p>En la actualidad, la convergencia digital está avanzando hacia una fusión de Internet con los sistemas urbano-productivos. Lo anterior se observa en el desarrollo de soluciones tecnológicas que basadas en las TIC, buscan tener una mayor eficiencia en la gestión de servicios públicos urbanos, como el sistema de transporte y movilidad.
-    En las empresas, la digitalización de la producción está generando fuertes cambios en los modelos de negocio pues ahora es posible la personalización de los productos, en función de las necesidades de los clientes, por lo que los sistemas productivos son cada vez más flexibles. La convergencia digital podemos entenderla como un proceso científico-tecnológico que ha ido evolucionando con el tiempo, generando una relación simbiótica e inseparable entre los sectores de la electrónica, la informática y las telecomunicaciones.
-    Más recientemente, la convergencia digital con sectores industriales como el automotriz, da inicio a nuevas trayectorias tecnológicas en el sector manufacturero, con innovaciones fuertemente articuladas al sector informático-telemático.
-     Esto significa otro momento en la evolución de Internet hacia lo que hoy se denomina como Internet de las Cosas.  </p><!--Situacion actual de gemelos digitales y convergencia digital-->
+            <div class="imgshtml">
+                <img style="border-radius: 10px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy9UPhHttQ0IPPaxkdHtr7UskfaAOveUvZwg&usqp=CAU">
+            </div>
+            <p>En la actualidad, la convergencia digital está avanzando hacia una fusión de Internet con los sistemas urbano-productivos. Lo anterior se observa en el desarrollo de soluciones tecnológicas que basadas en las TIC, buscan tener una mayor eficiencia en la gestión de servicios públicos urbanos, como el sistema de transporte y movilidad.
+            En las empresas, la digitalización de la producción está generando fuertes cambios en los modelos de negocio pues ahora es posible la personalización de los productos, en función de las necesidades de los clientes, por lo que los sistemas productivos son cada vez más flexibles. La convergencia digital podemos entenderla como un proceso científico-tecnológico que ha ido evolucionando con el tiempo, generando una relación simbiótica e inseparable entre los sectores de la electrónica, la informática y las telecomunicaciones.
+            Más recientemente, la convergencia digital con sectores industriales como el automotriz, da inicio a nuevas trayectorias tecnológicas en el sector manufacturero, con innovaciones fuertemente articuladas al sector informático-telemático.
+            Esto significa otro momento en la evolución de Internet hacia lo que hoy se denomina como Internet de las Cosas.</p><!--Situacion actual de gemelos digitales y convergencia digital-->
 
-     <h3>Gemelos digitales: réplicas virtuales de objetos físicos para simular, predecir y mejorar actividades del mundo real</h3>
+            <h3>Gemelos digitales: réplicas virtuales de objetos físicos para simular, predecir y mejorar actividades del mundo real</h3>
 
-    <p> Los gemelos digitales se convertirán en algo común en los negocios y la sociedad para 2035. Eso afirma el Digital Twindex, preparado por TCS Futurists, en un estudio realizado con la técnica Delphi, para reducir el sesgo y llegar a un consenso en torno a preguntas tanto cuantitativas como cualitativas, y en el que participaron científicos, futuristas y expertos en la materia. Se les pidió que calificaran qué tan pronto la adopción generalizada de gemelos digitales ocurriría en todas las industrias y la sociedad en general y responder preguntas abiertas sobre el impacto y el riesgo de las tecnologías de gemelos digitales. El Digital Twindex ilustra por qué los gemelos digitales están siendo cada vez más interesantes.</p>
+            <p> Los gemelos digitales se convertirán en algo común en los negocios y la sociedad para 2035. Eso afirma el Digital Twindex, preparado por TCS Futurists, en un estudio realizado con la técnica Delphi, para reducir el sesgo y llegar a un consenso en torno a preguntas tanto cuantitativas como cualitativas, y en el que participaron científicos, futuristas y expertos en la materia. Se les pidió que calificaran qué tan pronto la adopción generalizada de gemelos digitales ocurriría en todas las industrias y la sociedad en general y responder preguntas abiertas sobre el impacto y el riesgo de las tecnologías de gemelos digitales. El Digital Twindex ilustra por qué los gemelos digitales están siendo cada vez más interesantes.</p>
 
-    <p id="te">Escuesta estadistica del aumento en un aproximado de 10 años sobre la implementacion de los gemelos digitales en la industria</p>
-        <img style="width: 700px; height: 400px;" src="https://media.es.wired.com/photos/647e8be588218b01bf4a1c96/master/w_1600,c_limit/TCS%20Twindex%20Infographic_small.png">
+            <p id="te">Escuesta estadistica del aumento en un aproximado de 10 años sobre la implementacion de los gemelos digitales en la industria</p>
+            <div class="imgshtml">
+                <img style=" border-radius: 10px" src="https://media.es.wired.com/photos/647e8be588218b01bf4a1c96/master/w_1600,c_limit/TCS%20Twindex%20Infographic_small.png">
+            </div>
+            <p>Según el estudio, el 90% de los encuestados cree que los gemelos digitales se adoptarán ampliamente en la atención sanitaria en los próximos seis años para crear planes de tratamiento personalizados, predecir resultados sanitarios, controlar enfermedades crónicas y agilizar el desarrollo de fármacos. El 53% de los encuestados prevé la adopción de gemelos digitales en movilidad en los próximos tres años para mejorar el rendimiento de los vehículos, optimizar los patrones de tráfico y mejorar la seguridad de los AV.<br>
+                <br>
+                <br>
+               <!--LLamara a l script de la grafica--> 
+                <div id="chart_div"></div>
 
-        <p>Según el estudio, el 90% de los encuestados cree que los gemelos digitales se adoptarán ampliamente en la atención sanitaria en los próximos seis años para crear planes de tratamiento personalizados, predecir resultados sanitarios, controlar enfermedades crónicas y agilizar el desarrollo de fármacos. El 53% de los encuestados prevé la adopción de gemelos digitales en movilidad en los próximos tres años para mejorar el rendimiento de los vehículos, optimizar los patrones de tráfico y mejorar la seguridad de los AV.<br>
+
+            “Los gemelos digitales cambiarán la forma en que vivimos y trabajamos para 2035, con potencial para hacer que la humanidad sea más saludable y más eficaz en todo lo que hacemos”, explica Frank Diana, futurista de la compañía TCS. Según Diana, los gemelos digitales salvará vidas, humanas y animales. “El progreso de los gemelos digitales nos permite imaginar un mundo en el que las pruebas de nuevas tecnologías, procedimientos quirúrgicos, cosméticos y medicamentos para el cuerpo humano sucede enteramente en el ciberespacio. Nunca existirá el necesidad de volver a experimentar con un animal y, al mismo tiempo, investigar y los resultados ocurrirían a escalas y velocidades exponencialmente más altas que lo que es posible en el mundo real”, dice el futurista.</p>
+
+            <h3>Vision a futuro</h3>
+
+            <p>En cuanto a la visión a futuro de los gemelos digitales, se espera que se conviertan en una herramienta omnipresente tanto en el ámbito empresarial como en la sociedad en general para el año 2035. 
+                Esta visión se fundamenta en la capacidad de los gemelos digitales para integrar diversas fuentes de datos que describen en tiempo real el comportamiento de sistemas físicos y procesos. 
+                Estos gemelos no solo representarán una réplica virtual precisa de objetos físicos, sino que también permitirán simular, predecir y mejorar una amplia gama de actividades del mundo real. 
+                Se anticipa que su adopción se extenderá a sectores clave, como la atención sanitaria, la movilidad, la manufactura y más, donde se emplearán para crear planes de tratamiento personalizados, optimizar el rendimiento de vehículos, predecir el mantenimiento de equipos, entre otras aplicaciones. 
+                Esta evolución hacia la generalización de los gemelos digitales se visualiza como un catalizador para la transformación digital, mejorando la eficiencia, la productividad y la toma de decisiones en todas las áreas donde se implementen.</p>
+            <p>En el futuro, la convergencia digital continuará transformando la sociedad y la industria al integrar tecnologías 
+                como la inteligencia artificial, el big data y la computación en la nube, generando servicios más personalizados y 
+                eficientes. Esto impulsará la innovación, la competitividad empresarial y la mejora de la calidad de vida mediante 
+                una mayor conectividad y acceso a la información, redefiniendo la forma en que interactuamos con el mundo digital.</p>
             <br>
-            <br>
-
-        “Los gemelos digitales cambiarán la forma en que vivimos y trabajamos para 2035, con potencial para hacer que la humanidad sea más saludable y más eficaz en todo lo que hacemos”, explica Frank Diana, futurista de la compañía TCS. Según Diana, los gemelos digitales salvará vidas, humanas y animales. “El progreso de los gemelos digitales nos permite imaginar un mundo en el que las pruebas de nuevas tecnologías, procedimientos quirúrgicos, cosméticos y medicamentos para el cuerpo humano sucede enteramente en el ciberespacio. Nunca existirá el necesidad de volver a experimentar con un animal y, al mismo tiempo, investigar y los resultados ocurrirían a escalas y velocidades exponencialmente más altas que lo que es posible en el mundo real”, dice el futurista.</p>
-
-
-    <h3>Vision a futuro</h3>
-
-    <p>Un Gemelo Digital será capaz de integrar cuatro fuentes de datos fundamentales. Las métricas que describan en tiempo real el comportamiento del proceso o dispositivo. 
-    Los parámetros de configuración que se utilizaron para establecer la operativa del proceso, habitualmente manipulables por un operario humano, y que representan la oportunidad de optimización del este. Los factores externos se nutren de sensores o sistemas de información que representan el contexto y que en cierta forma puede afectar al Gemelo Digital. 
-    Por último, los valores objetivo representan los resultados del proceso productivo y serán aquellas que deben ser optimizadas en respuesta a los otros factores. 
-    Es en este momento, cuando se disponen de todos los elementos para el desarrollo de las capacidades del Gemelo Digital en cada una de las etapas descritas.</p>
+            <h2 style="text-align: center; color: magenta;">Conclusiones</h2>
+            <p><b>Basándonos en la información proporcionada sobre los gemelos digitales, podemos extraer las siguientes conclusiones generales:</b></p>
+            <ol style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; text-align: justify;">
+                <li><b>Definición:</b> Un gemelo digital es una réplica virtual precisa de un objeto físico, proceso o sistema del mundo real.
+                    Esta representación digital se crea mediante la recopilación de datos del mundo real utilizando sensores y otros dispositivos, y luego se utiliza la tecnología para crear una representación digital detallada y precisa.
+                </li>
+                <li><b>Aplicaciones:</b> Los gemelos digitales tienen una amplia gama de aplicaciones en diversas industrias. Se utilizan para simular el comportamiento de sistemas físicos, predecir su rendimiento, optimizar procesos, realizar mantenimiento predictivo y tomar decisiones más informadas</li>
+                <li><b>Impacto:</b> Su adopción está en aumento en sectores como la industria manufacturera, la automoción, la aviación, la salud y la energía. Están revolucionando la forma en que se diseñan, operan y mantienen sistemas físicos, lo que conduce a mejoras significativas en la eficiencia, la productividad y la toma de decisiones.</li>
+                <li><b>Futuro:</b> Se espera que los gemelos digitales se vuelvan cada vez más comunes en los negocios y la sociedad en general en los próximos años. Su potencial para mejorar la eficiencia y la eficacia en una amplia gama de aplicaciones los convierte en una tecnología fundamental para la transformación digital en curso.</li>
+            </ol>
+            <p><b>Bándonos en la información proporcionada sobre la convergencia digital, podemos extraer las siguientes conclusiones generales:</b></p>
+            <ol style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; text-align: justify;">
+                <li><b>Definición:</b> La convergencia digital se refiere a la tendencia de diferentes tecnologías, como la informática, las telecomunicaciones y los medios de comunicación, a integrarse y trabajar juntas en la era digital.
+                    Esto implica la fusión de distintas tecnologías para crear nuevas oportunidades y servicios.</li>
+                    <li><b>Características:</b> La convergencia digital se caracteriza por la integración de tecnologías de la información y las comunicaciones (TIC), como la inteligencia artificial, el big data y la computación en la nube, para impulsar el desarrollo de nuevos servicios y aplicaciones digitales.</li>
+                    <li><b>Aplicaciones:</b> La convergencia digital tiene aplicaciones en una amplia gama de sectores, incluidos la salud, la educación, la industria manufacturera, el transporte y más. Estas tecnologías están siendo utilizadas para mejorar la eficiencia y la calidad de los servicios, así como para impulsar la innovación en diferentes áreas.</li>
+                    <li><b>Impacto:</b> Su impacto se observa en el aumento del número de dispositivos conectados a Internet, el desarrollo de nuevos servicios digitales y la mejora en la eficiencia y la calidad de los servicios en diversos sectores. Además, está impulsando la transformación digital de empresas y sectores, lo que lleva a una mayor innovación y eficiencia operativa.</li>
+                    <li><b>Futuro:</b> Se espera que la convergencia digital continúe avanzando en el futuro, con una mayor integración de tecnologías y una mayor adopción en diferentes industrias y sectores. Su potencial para mejorar la conectividad, la eficiencia y la innovación la convierte en una tendencia clave en la era digital.</li>
+            
+            </ol>
+        </div>
     </div>
-    </div>
-    <h4>Bibliografia: </h4>
-    <a class="linksderef" href="https://www.atura.mx/blog/gemelos-digitales-y-convergencia-phygital#:~:text=Mientras%20que%20la%20convergencia%20phygital,an%C3%A1lisis%20y%20la%20optimizaci%C3%B3n%20en">Link 1</a><br />
-    <a class="linksderef" href="https://revistabyte.es/tendencias-tic/los-gemelos-digitales-metaverso/">Link 2</a>
-    <br />
-    <a class="linksderef" href="https://es.wired.com/articulos/gemelos-digitales-replicas-virtuales-de-objetos-fisicos-para-simular-predecir-y-mejorar-actividades-del-mundo-real">Estadisticas</a>
 
-    <h2>Alumnos</h2>
-    <p id="Alumno1">David Rocha González - 183468</p>
-    <p id="Alumno2">Jetro Gamiz Sanchez - 183807</p>
+    <!--Cuadro 4-->
+    <div id="ccuadro4">
+        <div id="cuadro4">
+            <h4 style="color: black;"><b>Si tienes alguna otra duda de que es o como funcionan los gemelos digitales o la convergencia digital,  puedes visitar las siguientes redes sociales:</b></h4>
+            <nav style="background: none;" >
+                <a style="background-color: rgb(102, 102, 226);" href="https://www.facebook.com/profile.php?id=61550899782950" class="menu">facebook</a>
+                <a style="background-color: black;" href="http://www.condei.com.mx/" class="menu">Internet</a>
+                <a style="background-color: rgb(193, 3, 231);" href="https://www.instagram.com/explore/tags/gemelosdigitales/" class="menu">Instagram</a>
+                <a style="background-color: black;" href="https://axity.com/comunidad-axity/convergencia-digital-eje-que-garantiza-la-competitividad-en-una-organizacion/" class="menu">Internet</a>
+            </nav>
+            <h4>Bibliografia: </h4>
+            <b>
+            <a class="linksderef" href="https://www.atura.mx/blog/gemelos-digitales-y-convergencia-phygital#:~:text=Mientras%20que%20la%20convergencia%20phygital,an%C3%A1lisis%20y%20la%20optimizaci%C3%B3n%20en">Página 1</a><br />
+            <a class="linksderef" href="https://revistabyte.es/tendencias-tic/los-gemelos-digitales-metaverso/">Página 2</a><br>
+            <a class="linksderef" href="https://www.iberdrola.com/innovacion/gemelos-digitales">Pagina 3</a><br>
+            <a class="linksderef" href="https://axity.com/comunidad-axity/convergencia-digital-eje-que-garantiza-la-competitividad-en-una-organizacion/">Página 4</a><br>
+            <a class="linksderef" href="https://www.canalinstitucional.tv/te-interesa/convergencia-tecnologica-definicion-e-influencia-en-medios-de-comunicacion">Página 5</a><br>
+            <a class="linksderef" href="https://es.wired.com/articulos/gemelos-digitales-replicas-virtuales-de-objetos-fisicos-para-simular-predecir-y-mejorar-actividades-del-mundo-real">Estadisticas</a>
+            </b>
+            <h2>Alumnos</h2>
+            <p id="Alumno1"><b>Jetro Gamiz Sanchez - 183807</b></p>
+            <p id="Alumno2"><b>David Rocha González - 183468</b></p>
+        </div>
+    </div>
+    <br><br><br>
+
+    <footer>
+        <p>© 2024 Proyecto Programacion Web 1 | Todos los derechos reservados</p>
+        <img src="https://www.upslp.edu.mx/upslp/wp-content/themes/icemagtheme/images/demo/icemaglogo.png" alt="Logo" />
+    </footer>   
 </body>
 </html>

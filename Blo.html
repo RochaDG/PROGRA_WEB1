@@ -4,51 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog con Comentarios</title>
+    <!-- Enlace al archivo de estilos CSS -->
     <link rel="stylesheet" href="Blo.css">
 </head>
+<!-- Contenido del cuerpo del documento -->
 <body>
+    <!-- Barra de navegación -->
+    <nav>
+        <a href="Proyecto.html" class="menu">Pagina principal</a>
+        <a href="Img.html" class="menu">Imagenes</a>
+        <a href="Interaccion.html" class="menu">Interaccion</a>
+        <a href="FormularioProyecto.html" class="menu">Encuesta</a>
+        <a href="Preguntas.html" class="menu">Preguntas</a>
+    </nav>
+    <!-- Contenedor principal -->
+    <div>
+        
+    </div>
     <div class="container">
+        <!-- Título del artículo -->
         <h1>Convergencia Digital y gemelos digitales</h1>
         
+        <!-- Sección de comentarios -->
         <div class="comments-section">
             <h3>Comentarios</h3>
+            <!-- Contenedor de los comentarios -->
             <div id="comments"></div>
+            <!-- Formulario para agregar un comentario -->
             <div class="comment-form">
                 <h4>Agregar un comentario</h4>
+                <!-- Área de texto para ingresar el comentario -->
                 <textarea id="commentText" rows="4" placeholder="Escribe tu comentario aquí..."></textarea>
+                <!-- Botón para enviar el comentario -->
                 <button onclick="addComment()">Enviar</button>
             </div>
         </div>
     </div>
-    <script >
+    <!-- Script para manejar los comentarios -->
+    <script>
+        // Evento que se dispara cuando el DOM está completamente cargado
         document.addEventListener("DOMContentLoaded", () => {
-    loadComments();
-});
+            loadComments();
+        });
 
-function loadComments() {
-    let comments = JSON.parse(localStorage.getItem('comments')) || [];
-    let commentsContainer = document.getElementById('comments');
-    commentsContainer.innerHTML = '';
-    comments.forEach(comment => {
-        let commentDiv = document.createElement('div');
-        commentDiv.className = 'comment';
-        commentDiv.innerText = comment;
-        commentsContainer.appendChild(commentDiv);
-    });
-}
+        // Función para cargar los comentarios desde el almacenamiento local
+        function loadComments() {
+            let comments = JSON.parse(localStorage.getItem('comments')) || [];
+            let commentsContainer = document.getElementById('comments');
+            commentsContainer.innerHTML = '';
+            comments.forEach(comment => {
+                let commentDiv = document.createElement('div');
+                commentDiv.className = 'comment';
+                commentDiv.innerText = comment;
+                commentsContainer.appendChild(commentDiv);
+            });
+        }
 
-function addComment() {
-    let commentText = document.getElementById('commentText').value;
-    if (commentText.trim() === '') {
-        alert('El comentario no puede estar vacío');
-        return;
-    }
-    let comments = JSON.parse(localStorage.getItem('comments')) || [];
-    comments.push(commentText);
-    localStorage.setItem('comments', JSON.stringify(comments));
-    document.getElementById('commentText').value = '';
-    loadComments();
-}
+        // Función para agregar un comentario
+        function addComment() {
+            let commentText = document.getElementById('commentText').value;
+            // Verificar si el comentario está vacío
+            if (commentText.trim() === '') {
+                alert('El comentario no puede estar vacío');
+                return;
+            }
+            let comments = JSON.parse(localStorage.getItem('comments')) || [];
+            comments.push(commentText);
+            localStorage.setItem('comments', JSON.stringify(comments));
+            document.getElementById('commentText').value = '';
+            loadComments();
+        }
     </script>
 </body>
 </html>
