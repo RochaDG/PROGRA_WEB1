@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Obtener totales del formulario</title>
+    <link rel="stylesheet" href="Formulario.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style type="text/css">
+        /* Estilos para el menú de navegación */
+.menu {
+    display: inline-block; /* Mostrar el elemento como un bloque en línea */
+    background: black; /* Color de fondo del menú */
+    padding: 10px 20px; /* Espaciado interno del menú */
+    text-decoration: none; /* Eliminar subrayado de los enlaces */
+    border-radius: 10px; /* Bordes redondeados del menú */
+    color: white; /* Color del texto */
+    transition: .5s; /* Transición suave para los cambios de estilo */
+}
+
+/* Estilos para el menú cuando se pasa el ratón por encima */
+.menu:hover {
+    background: green; /* Color de fondo del menú al pasar el ratón */
+    padding: 15px 25px; /* Incremento del espaciado interno al pasar el ratón */
+    color: #E3EA50; /* Color del texto al pasar el ratón */
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    background: black; /* Color de fondo de la barra de navegación */
+    justify-content: space-around; /* Distribuir los elementos de forma equitativa */
+    display: flex; /* Utilizar el modelo de caja flexible */
+    padding: 10px; /* Espaciado interno de la barra de navegación */
+    border-radius: 10px; /* Bordes redondeados de la barra de navegación */
+}
+
+    </style>  
+</head>
+<body>
+    <nav>
+        <a href="Proyecto.html" class="menu">Pagina principal</a>
+        <a href="" class="menu">Interacción</a>
+        <a href="" class="menu">Blog</a>
+        <a href="Img.html" class="menu">Imágenes</a>
+        <a href="Preguntas.html" class="menu">Preguntas</a>
+    </nav>
+
+    <div id="contiene">
+        <h1>Responde la encuesta</h1>
+        <h2>Tu opinión es importante</h2>
+        <div>
+            <form>
+                <ul>
+                    <li>¿Que son los corridos tumbados?</li>
+        <input type="radio" name="r1" id="r1" value="5"/>Un género de música norteña que incorpora elementos de rap y trap<br/>
+        <input type="radio" name="r1" id="r1" value="0"/>Un estilo de baile tradicional<br/>
+        <input type="radio" name="r1" id="r1" value="0"/>Un tipo de poesía mexicana<br/>
+        <input type="radio" name="r1" id="r1" value="0"/>Un género de cine mexicano<br/>
+        
+        <li>¿Quién es considerado el pionero de los corridos tumbados?</li>
+        <input type="radio" name="r2" id="r2" value="0"/>Alejandro Fernández<br/>
+        <input type="radio" name="r2" id="r2" value="0"/>Luis R.Conriquez<br/>
+        <input type="radio" name="r2" id="r2" value="0"/>Peso pluma<br/>
+        <input type="radio" name="r2" id="r2" value="5"/>Natanael Cano<br/>
+
+        <li>¿Qué caracteriza a los corridos tumbados?</li>
+        <input type="radio" name="r3" id="r3" value="0"/> Uso de guitarras eléctricas y letras relacionadas con el narcotráfico<br/>
+        <input type="radio" name="r3" id="r3" value="5"/>Combinación de música tradicional y moderna, con influencia de rap<br/>
+        <input type="radio" name="r3" id="r3" value="0"/>Sonidos electrónicos y voces sintetizadas<br/>
+        <input type="radio" name="r3" id="r3" value="0"/>Uso de instrumentos clásicos y letras poéticas<br/>
+
+        <li>¿En qué año comenzaron a ganar popularidad los corridos tumbados?</li>
+        <input type="radio" name="r4" id="r4" value="5"/>2018<br/>
+        <input type="radio" name="r4" id="r4" value="0"/>2022<br/>
+        <input type="radio" name="r4" id="r4" value="0"/>2019<br/>
+        <input type="radio" name="r4" id="r4" value="0"/>2020<br/>
+        
+        <li>¿Qué instrumento es común en los corridos tumbados?</li>
+        <input type="radio" name="r5" id="r5" value="0"/>Trompeta<br/>
+        <input type="radio" name="r5" id="r5" value="0"/>Violin<br/>
+        <input type="radio" name="r5" id="r5" value="5"/>Guitarra Acustica<br/>
+        <input type="radio" name="r5" id="r5" value="5"/>Tololoche<br/>
+
+        <li>¿Cuál de las siguientes canciones es un corrido tumbado?</li>
+        <input type="radio" name="r6" id="r6" value="0"/>"La Cumbia del Garrote" de Rigo Tovar<br/>
+        <input type="radio" name="r6" id="r6" value="5"/>"Soy El Diablo" de Natanael Cano<br/>
+        <input type="radio" name="r6" id="r6" value="0"/>"La pizza" de Jose Tores<br/>
+        <input type="radio" name="r6" id="r6" value="0"/>"Despacito" de Luis Fonsi<br/>
+
+        <li>¿Los corridos tumbados están asociados con la cultura popular mexicana?</li>
+        <input type="radio" name="r7" id="r7" value="0"/>No, son un fenómeno completamente extranjero<br/>
+        <input type="radio" name="r7" id="r7" value="0"/>Solo en las regiones norteñas<br/>
+        <input type="radio" name="r7" id="r7" value="0"/>Sí, pero solo en ciertos grupos sociales<br/>
+        <input type="radio" name="r7" id="r7" value="5"/> Sí, están influyendo en la música moderna y tienen raíces en la tradición<br/>
+
+        <li>¿Qué tipo de temas suelen abordar las letras de los corridos tumbados?</li>
+        <input type="radio" name="r8" id="r8" value="5"/>Vida en la calle, drogas, y experiencias personales<br/>
+        <input type="radio" name="r8" id="r8" value="0"/> Amor y romance<br/>
+        <input type="radio" name="r8" id="r8" value="0"/>Historia y mitología<br/>
+        <input type="radio" name="r8" id="r8" value="0"/>Crítica política<br/>
+
+        <li>¿Quiénes suelen ser los principales oyentes de los corridos tumbados?</li>
+        <input type="radio" name="r9" id="r9" value="5"/>Jóvenes y adultos jóvenes<br/>
+        <input type="radio" name="r9" id="r9" value="0"/> Personas mayores de 40 años<br/>
+        <input type="radio" name="r9" id="r9" value="0"/>Niños y adolescentes<br/>
+        <input type="radio" name="r9" id="r9" value="0"/>Personas de todas las edades<br/>
+        
+        <li>¿Cómo ha sido la recepción de los corridos tumbados por parte del público y la crítica?</li>
+        <input type="radio" name="r10" id="r10" value="0"/>Universalmente positiva<br/>
+        <input type="radio" name="r10" id="r10" value="0"/>En su mayoría negativa debido a las letras controvertidas<br/>
+        <input type="radio" name="r10" id="r10" value="5"/>Dividida: algunos lo consideran innovador y otros lo ven como polémico<br/>
+        <input type="radio" nam
+                </ul>
+                <input type="button" value="Calificar" onclick="obtenerTotales()">
+            </form>
+        </div>
+        <div id="totales" style="margin-top: 20px;">
+            <!-- Aquí se mostrarán los totales y el PDF generado -->
+        </div>
+    </div>
+    
+    <script>
+        function obtenerTotales() {
+            let total = 0;
+            for (let i = 1; i <= 10; i++) {
+                let radios = document.getElementsByName("r" + i);
+                for (let j = 0; j < radios.length; j++) {
+                    if (radios[j].checked) {
+                        total += parseInt(radios[j].value);
+                    }
+                }
+            }
+
+            let porcentaje = (total / 50) * 100; // 50 es el total de puntos posibles
+            let contenedorTotales = document.getElementById("totales");
+            contenedorTotales.innerHTML = "<p>Total de puntos: " + total + "</p>";
+            contenedorTotales.innerHTML += "<p>Porcentaje: " + porcentaje + "%</p>";
+
+            generar(total, porcentaje);
+        }
+
+        async function generar(total, porcentaje) {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            doc.text("Resultados de la encuesta", 10, 10);
+            doc.text("Total de puntos: " + total, 10, 20);
+            doc.text("Porcentaje: " + porcentaje + "%", 10, 30);
+
+            const pdfDataUri = doc.output('datauristring');
+
+            let iframe = document.createElement("iframe");
+            iframe.style.width = "100%";
+            iframe.style.height = "500px";
+            iframe.src = pdfDataUri;
+
+            const contenedorTotales = document.getElementById("totales");
+            contenedorTotales.appendChild(iframe);
+        }
+    </script>
+</body>
+</html>

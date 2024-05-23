@@ -1,6 +1,6 @@
 body {
     font-family: 'Roboto Condensed', sans-serif; /* Usar la fuente importada */
-    background-color: #f5f5f5; /* Fondo claro para un look limpio */
+    background-color: #C9EDFE; /* Fondo claro para un look limpio */
     color: #333; /* Color de texto principal */
     margin: 0;
     padding: 0;
@@ -14,11 +14,12 @@ body {
     background: white; /* Fondo blanco para el contenedor */
     border: 1px solid #ccc; /* Borde ligero para definir el área */
     border-radius: 8px; /* Borde redondeado */
+    background-color: #F6F29A;
 }
 
 /* Estilo para encabezados */
 h1 {
-    font-family: 'Charmonman', serif; /* Usar otra fuente para variedad */
+    font-family:Verdana, Geneva, Tahoma, sans-serif; /* Usar otra fuente para variedad */
     font-size: 2em; /* Tamaño grande para el h1 */
     color: #333; /* Color de texto */
     text-align: center; /* Centrar el texto */
@@ -28,6 +29,7 @@ h2 {
     font-size: 1.5em; /* Tamaño para el h2 */
     color: #666; /* Color de texto secundario */
     text-align: center; /* Centrar el texto */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /* Estilo para listas y elementos de entrada */
@@ -38,10 +40,13 @@ ul {
 
 li {
     margin-bottom: 10px; /* Espaciado entre elementos de lista */
+    font-family: Arial;
+    color: black;
 }
 
 input[type="radio"] {
     margin-right: 10px; /* Espaciado después de los botones de opción */
+    display: inline; /* Mostrar botones de opción en línea */
 }
 
 /* Estilo para botones */
@@ -53,6 +58,8 @@ input[type="button"] {
     border-radius: 4px; /* Borde redondeado */
     cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
     transition: background-color 0.3s; /* Transición suave */
+    margin-bottom: 10px; /* Espaciado entre botones */
+    display: block; /* Mostrar botones en bloque */
 }
 
 input[type="button"]:hover {
@@ -63,6 +70,8 @@ input[type="button"]:hover {
 iframe {
     border: 1px solid #ccc; /* Borde alrededor del iframe */
     border-radius: 8px; /* Borde redondeado */
+    width: 100%; /* Ancho completo */
+    box-sizing: border-box; /* Incluir borde en el tamaño total */
 }
 
 /* Estilo para el texto dinámico */
@@ -70,4 +79,5 @@ iframe {
     font-size: 1em; /* Tamaño estándar del texto */
     color: #333; /* Color del texto */
     text-align: center; /* Centrar el texto */
+    margin-bottom: 10px; /* Espaciado inferior */
 }
