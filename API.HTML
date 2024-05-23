@@ -1,9 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript Validation</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            font-size: 1em;
+            margin: 10px 0;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff7e5f;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #feb47b;
+        }
+
+        #dem, #demo, #dem1 {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #ff7e5f;
+        }
+    </style>
 </head>
 <body>
 <h2>JavaScript Validation</h2>
@@ -20,38 +69,47 @@
 
 <p>Ingresa un numero:</p>
 
-<input type="id2" type="number" max="100">
+<input id="id2" type="number" max="100">
 <button onclick="Solomax()">Ok</button>
 <br><br><br>
 <p>Si el numero es mayor se lanzara un error</p>
 
 <p id="demo"></p>
-<p>Ingresa nu numero:</p>
-<input type="id3" type="number" min="100" >
+<p>Ingresa un numero:</p>
+<input id="id3" type="number" min="100">
 <button onclick="myFuction()">Ok</button>
 
 <p id="dem1"></p>
 <p>Si el numero es mayor a 100 lanzara un error</p>
-<script >
-	function Maxmin(){
 
-		const inpObj=document.getElementById("id1");
-		if(!inpObj.checkValidity()){
-			document.getElementById("dem").innerHTML = inpObj.validationMessage;
-		}else{
-			document.getElementById("dem").innerHTML = "Input Ok";
-		} 
+<script>
+    function Maxmin() {
+        const inpObj = document.getElementById("id1");
+        if (!inpObj.checkValidity()) {
+            document.getElementById("dem").innerHTML = inpObj.validationMessage;
+        } else {
+            document.getElementById("dem").innerHTML = "Input Ok";
+        }
+    }
 
-	}
-	function Solomax(){
-		let text;
-		if(document.getElementById("id2").validity.rangerOverflow){
-			text = "El numero es demasiado grande";
-		}else {
-			text = "Input OK"
-		}
-		document.getElementById(dem1).innerHTML=text;
-	}
+    function Solomax() {
+        let text;
+        if (document.getElementById("id2").validity.rangeOverflow) {
+            text = "El numero es demasiado grande";
+        } else {
+            text = "Input OK";
+        }
+        document.getElementById("demo").innerHTML = text;
+    }
+
+    function myFuction() {
+        const inpObj = document.getElementById("id3");
+        if (!inpObj.checkValidity()) {
+            document.getElementById("dem1").innerHTML = inpObj.validationMessage;
+        } else {
+            document.getElementById("dem1").innerHTML = "Input Ok";
+        }
+    }
 </script>
 </body>
 </html>
